@@ -2,6 +2,7 @@ import { Calendar, dayjsLocalizer } from "react-big-calendar";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import dayjs from "dayjs";
 import "dayjs/locale/es";
+import "./bigCalendar.css";
 
 dayjs.locale("es");
 const localizer = dayjsLocalizer(dayjs);
@@ -20,9 +21,16 @@ const events = [
 ];
 
 const Bigcalendar = () => {
-  console.log(events); // validación útil
   return (
-    <div style={{ height: "95vh", width: "80vw", margin: "auto" }}>
+    <div
+      style={{
+        height: "100vh",
+        width: "100vw",
+        display: "flex",
+        flexDirection: "column",
+        overflow: "hidden",
+      }}
+    >
       <Calendar
         localizer={localizer}
         events={events}
@@ -32,6 +40,7 @@ const Bigcalendar = () => {
         endAccessor="end"
         min={dayjs("2025-01-01T07:00:00").toDate()}
         max={dayjs("2025-01-01T18:00:00").toDate()}
+        style={{ flex: 1 }}
       />
     </div>
   );

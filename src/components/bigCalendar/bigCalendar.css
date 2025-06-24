@@ -1,0 +1,11 @@
+.rbc-event-content {
+  white-space: normal;
+}
+.rbc-event {
+  width: 100% !important;
+}
+
+.rbc-day-slot .rbc-events-container {
+  margin: 0;
+  padding: 0;
+}
